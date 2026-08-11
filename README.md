@@ -3,7 +3,7 @@
 A Python-based tool to analyze log files (like SSH/auth logs) and detect suspicious activity — inspired by real SOC analyst workflows.
 
 ## 🎯 Features (Planned)
-- [ ] Parse log files (CSV/text) for IP, timestamp, and login status
+- [x] Parse log files (CSV/text) for IP, timestamp, and login status
 - [ ] Detect brute-force attempts (multiple failed logins from same IP)
 - [ ] Flag suspicious IPs based on threshold
 - [ ] Generate readable reports
