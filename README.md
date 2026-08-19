@@ -17,6 +17,7 @@ A Python-based tool to analyze log files (like SSH/auth logs) and detect suspici
 ## 🚧 Status
 Work in progress — building step by step to learn SOC/SIEM concepts hands-on.
 
-## 📖 How to Run
+## 📖 How to Run -:
 *(Coming very soon)*
+**
 **
