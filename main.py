@@ -31,7 +31,7 @@ def search_logs():
     with open("login_logs.csv", "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            if row["ip_address"] == search_term or row["username"] == search_term:
+            if row["ip_address"] == search_term or row["username"].lower() == search_term.lower():
                 print(f"Time: {row['timestamp']}, IP: {row['ip_address']}, User: {row['username']}, Status: {row['status']}, Location: {row['location']}")
                 found = True
     if not found:
