@@ -20,9 +20,19 @@ def detect_suspicious_ips():
                 else:
                     failed_attempts[ip] = 1
 
+    suspicious_list = []
     for ip, count in failed_attempts.items():
         if count >= 3:
             print(f"SUSPICIOUS: {ip} had {count} failed login attempts!")
+            suspicious_list.append({"ip_address": ip, "failed_attempts": count})
+
+    if suspicious_list:
+        with open("suspicious_report.csv", "w", newline="") as file:
+            writer = csv.DictWriter(file, fieldnames=["ip_address", "failed_attempts"])
+            writer.writeheader()
+            writer.writerows(suspicious_list)
+        print("Report saved to suspicious_report.csv")
+
 
 
 def search_logs():
