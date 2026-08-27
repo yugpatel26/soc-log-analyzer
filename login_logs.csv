@@ -4,6 +4,7 @@ timestamp,ip_address,username,status,location
 2026-08-08 10:15:24,192.168.1.10,admin,failed,India
 2026-08-08 10:15:26,192.168.1.10,admin,failed,India
 2026-08-08 10:15:28,192.168.1.10,admin,failed,India
+2026-08-08 10:15:30,192.168.1.10,admin,success,India
 2026-08-08 10:20:00,10.0.0.5,john,success,India
 2026-08-08 11:05:10,203.45.67.89,root,failed,Russia
 2026-08-08 11:05:12,203.45.67.89,root,failed,Russia

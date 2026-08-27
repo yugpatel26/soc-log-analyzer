@@ -48,12 +48,34 @@ def search_logs():
         print("No records found.")
 
 
+
+def detect_successfull_after_failures():
+    failed_attempts = {}
+    success_ips = set()
+    with open("login_logs.csv", "r") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            ip = row["ip_address"]
+            if row["status"] == "failed":
+                if ip in failed_attempts:
+                    failed_attempts[ip] = failed_attempts[ip] + 1
+                else:
+                    failed_attempts[ip] = 1
+            elif row["status"] == "success":
+                success_ips.add(ip)
+    
+    for ip, count in failed_attempts.items():
+        if count >= 3 and ip in success_ips:
+            print(f"HIGH ALERT: {ip} failed {count} times but then succeeded — possible compromised account!")
+
+
 while True:
     print("----SOC LOG ANALYZER----")
     print("1. Load Logs")
     print("2. Detect Suspicious IPs")
     print("3. Search by IP/Username")
-    print("4. Exit")
+    print("4. Detect Successful Logins After Failures")
+    print("5. Exit")
     choice = input("Enter your choice: ")
     if choice == "1":
         load_logs()
@@ -62,6 +84,8 @@ while True:
     elif choice == "3":
         search_logs()
     elif choice == "4":
+        detect_successfull_after_failures()
+    elif choice == "5":
         print("Exiting...")
         break
     else:
