@@ -33,9 +33,9 @@ A Python-based command-line tool that analyzes login/authentication logs and det
 ## 📖 How It Works
 
 The tool reads login attempt records from `login_logs.csv`. Using a menu-driven interface, users can:
-1. View all logged login attempts
-2. Detect IPs with excessive failed login attempts
-3. Search logs by IP address or username
+1. View all logged login attempts.
+2. Detect IPs with excessive failed login attempts.
+3. Search logs by IP address or username.
 4. Identify accounts that succeeded after multiple failed attempts (possible compromise)
 
 Suspicious activity is flagged directly in the console, and a summary report can be exported to CSV for further review.
