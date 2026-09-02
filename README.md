@@ -54,7 +54,7 @@ timestamp,ip_address,username,status,location
 - Using dictionaries to aggregate and count events (grouping by IP)
 - Using sets to track unique values efficiently
 - Simulating real-world SOC analyst detection logic (brute-force detection, compromised account indicators)
-- Git/GitHub workflow, including resolving merge conflicts and recovering from a corrupted repository.
+- Git/GitHub workflow, including resolving merge conflicts and recovering from a corrupted repository.....
 
 ## 📝 Note
 
