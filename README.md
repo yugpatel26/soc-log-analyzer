@@ -30,7 +30,7 @@ A Python-based command-line tool that analyzes login/authentication logs and det
    python main.py
 ```
 
-## 📖 How It Works
+## 📖 How It Works.
 
 The tool reads login attempt records from `login_logs.csv`. Using a menu-driven interface, users can:
 1. View all logged login attempts.
